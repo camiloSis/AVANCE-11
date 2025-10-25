@@ -3,7 +3,11 @@ let precio;
 
 do {
     precio = parseFloat(prompt("Ingrese el precio del producto (ingrese 0 para finalizar): "));
-    total += precio; 
+    if (precio > 0 ) {
+        total += precio;
+    } else if (precio < 0 ) {
+        console.log("Precio invalido, intente de nuevo.");
+    } 
 
 } while (precio !== 0); 
 
